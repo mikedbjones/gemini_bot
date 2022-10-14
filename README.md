@@ -2,7 +2,7 @@
 
 A Simple Gemini DCA bot.
 
-Forked and modified from [gemini_bot](https://github.com/kdmukai/gemini_bot) by [kdmukai](https://github.com/kdmukai).
+Forked and modified from [kdmukai/gemini_bot](https://github.com/kdmukai/gemini_bot) and [ryanwalder/gemini_bot](https://github.com/ryanwalder/gemini_bot).
 
 ## Overview
 
@@ -121,7 +121,7 @@ The best way to run this script is via a cronjob as this gives us the Dollar Cos
 I would suggest using the full paths to the python venv python, `gemini_bot.py`, and the `settings.conf` file as below. This usually gets around many common cron issues.
 
 ```
-05 */2 * * * /path/to/geminibot/bot/venv/bin/python gemini_bot.py /path/to/geminibot/bot/gemini_bot.py --config /var/lib/geminibot/bot/settings.conf BTCUSD BUY 5.00 USD
+05 */2 * * * /path/to/geminibot/bot/venv/bin/python gemini_bot.py /path/to/geminibot/bot/gemini_bot.py -l info -c /var/lib/geminibot/bot/settings.conf BTCUSD BUY 5.00 USD >> /path/to/geminibot/bot/cron.log 2>&1
 ```
 
 This will buy USD$5 worth of BTC every other hour at 5min past the hour.
